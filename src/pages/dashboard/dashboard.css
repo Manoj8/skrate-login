@@ -1,0 +1,355 @@
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.dash-logo {
+    position: absolute;
+    left: 50px;
+}
+
+.profile {
+    position: fixed;
+    font-size: 24px;
+    line-height: 36px;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 1;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 125px;
+    position: relative;
+    right: 50px;
+}
+
+.profile p {
+    margin-left: 10px;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+
+.sign-out-btn {
+    width: 138px;
+    height: 62px;
+    background: #4F65F6;
+    font-size: 24px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.dash-body {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 100px;
+}
+
+.side-bar-list {
+    position: fixed;
+    width: 200px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0px;
+}
+
+.menu-list-item {
+    display: flex;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.img-icon {
+    margin: 0px 30px;
+}
+
+.active-path {
+    width: 5px;
+    background: #4F65F6;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.dash-header {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    margin: 10px 15px;
+}
+
+.dash-data {
+    display: grid;
+    gap: 10px;
+    position: relative;
+    left: 200px;
+    top: 35px;
+    width: calc(100% - 200px);
+}
+
+.overview {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.job-postings {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.upcoming-session {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.dash-sections {
+    /* width: 46%; */
+    background: #FFFFFF;
+    border: 1px solid #FDFDFD;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.overview-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overview-data {
+    width: 50%;
+}
+
+.overview-stats {
+    background: #F6F7FF;
+    margin: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.stat-value {
+    font-size: 48px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4F65F6;
+}
+
+.session-job-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.session-time {
+    display: grid;
+    text-align: center;
+}
+
+.session-date {
+    margin: 5px 0px;
+}
+
+.mentor-session {
+    background: #E8C9D1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.review-session {
+    background: #91AEE1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.session-job-role {
+    display: flex;
+    align-items: center;
+}
+
+.mentor-posting-name {
+    display: grid;
+    margin-left: 15px;
+}
+
+.upcoming-session,
+.job-postings {
+    font-size: 18px;
+}
+
+.role {
+    font-size: 22px;
+    font-size: 22px;
+    line-height: 33px;
+    color: #181818;
+}
+
+.job-role-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+}
+
+.job-action {
+    display: contents;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .profile-section {
+        height: 100px;
+    }
+
+    .sign-out-btn {
+        display: none;
+    }
+
+    .dash-body {
+        flex-direction: column;
+
+    }
+
+    .dash-data {
+        top: 45px;
+        left: 0px;
+        width: 100%;
+        display: block;
+    }
+
+    .side-bar-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFF;
+        min-height: 50px;
+        top: 100px;
+        z-index: 1;
+    }
+
+    .img-icon {
+        display: none;
+    }
+
+    .menu-list-item {
+        margin: 0px 25px;
+        display: inline-table;
+        position: relative;
+
+        font-size: 18px;
+    }
+
+    .active-path {
+        position: absolute;
+        width: 5px;
+        height: 50px;
+        left: 18px;
+        top: 5px;
+        background: #4F65F6;
+        border-radius: 0px 5px 5px 0px;
+        transform: rotate(-90deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .profile-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .side-bar-list {
+        top: calc(100% - 75px);
+        margin: 0px;
+        padding: 10px 0px;
+        justify-content: space-around;
+    }
+
+    .menu-list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .img-icon {
+        display: block;
+        margin: 0px;
+    }
+
+    .active-path {
+        position: absolute;
+        top: -30px;
+        left: 13px;
+        width: 4.84px;
+        height: 36px;
+        transform: rotate(90deg);
+    }
+
+    .dash-body {
+        top: 35px;
+    }
+
+    .dash-logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .overview-data {
+        width: 100%;
+    }
+
+    .session-job-icon {
+        display: none;
+    }
+
+    .session-job-data p {
+        width: 50%;
+    }
+
+    .session-job-data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .session-time {
+        text-align: right;
+    }
+
+    .mentor-posting-name {
+        margin-left: 0px !important;
+    }
+
+    .job-action {
+        display: block;
+        text-align: right;
+    }
+}
