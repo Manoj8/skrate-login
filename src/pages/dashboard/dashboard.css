@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
 }
@@ -17,7 +17,7 @@
     font-size: 24px;
     line-height: 36px;
     width: 100%;
-    background: #FFFFFF;
+    background: #ffffff;
     z-index: 1;
 }
 
@@ -41,15 +41,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .sign-out-btn {
     width: 138px;
     height: 62px;
-    background: #4F65F6;
+    background: #4f65f6;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 5px;
     margin-right: 25px;
 }
@@ -83,7 +83,7 @@
 
 .active-path {
     width: 5px;
-    background: #4F65F6;
+    background: #4f65f6;
     border-radius: 0px 5px 5px 0px;
 }
 
@@ -96,7 +96,6 @@
 
 .dash-data {
     display: grid;
-    gap: 10px;
     position: relative;
     left: 200px;
     top: 35px;
@@ -119,25 +118,19 @@
 }
 
 .dash-sections {
-    /* width: 46%; */
-    background: #FFFFFF;
-    border: 1px solid #FDFDFD;
+    background: #ffffff;
+    border: 1px solid #fdfdfd;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    margin: 10px;
+    margin: 25px 25px 0px 0px;
 }
 
 .overview-details {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.overview-data {
-    width: 50%;
+    display: grid;
 }
 
 .overview-stats {
-    background: #F6F7FF;
+    background: #f6f7ff;
     margin: 15px;
     padding: 25px;
     display: flex;
@@ -152,7 +145,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #4F65F6;
+    color: #4f65f6;
 }
 
 .session-job-data {
@@ -172,13 +165,13 @@
 }
 
 .mentor-session {
-    background: #E8C9D1;
+    background: #e8c9d1;
     border-radius: 5px;
     padding: 10px;
 }
 
 .review-session {
-    background: #91AEE1;
+    background: #91aee1;
     border-radius: 5px;
     padding: 10px;
 }
@@ -215,20 +208,23 @@
     display: contents;
 }
 
-
 @media screen and (max-width: 992px) {
-
     .profile-section {
         height: 100px;
     }
 
     .sign-out-btn {
-        display: none;
+        width: 100px;
+        height: 45px;
+        background: #4f65f6;
+        font-size: 18px;
+        color: #ffffff;
+        border-radius: 5px;
+        margin-right: 10px;
     }
 
     .dash-body {
         flex-direction: column;
-
     }
 
     .dash-data {
@@ -238,12 +234,16 @@
         display: block;
     }
 
+    .dash-sections {
+        margin: 25px 20px;
+    }
+
     .side-bar-list {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #FFFFFF;
+        background: #ffffff;
         min-height: 50px;
         top: 100px;
         z-index: 1;
@@ -267,14 +267,13 @@
         height: 50px;
         left: 18px;
         top: 5px;
-        background: #4F65F6;
+        background: #4f65f6;
         border-radius: 0px 5px 5px 0px;
         transform: rotate(-90deg);
     }
 }
 
 @media screen and (max-width: 600px) {
-
     .profile-icon {
         width: 30px;
         height: 30px;
@@ -322,8 +321,8 @@
         width: 100px;
     }
 
-    .overview-data {
-        width: 100%;
+    .overview-details {
+        display: block;
     }
 
     .session-job-icon {

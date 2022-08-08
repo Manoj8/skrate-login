@@ -4,6 +4,7 @@ import { hashCode, intToRGB } from "../../utils";
 
 function DashDetails(props) {
   const { dashboardData } = props;
+
   return (
     <div className="dash-data">
       <div className="overview dash-sections">
@@ -13,9 +14,9 @@ function DashDetails(props) {
             const dashStats = data.split("_");
             const statsName = dashStats[0].charAt(0).toUpperCase() + dashStats[0].substring(1) + " " + dashStats[1].charAt(0).toUpperCase() + dashStats[1].substring(1);
             return (
-              <div className="overview-data" key={data + index}>
+              <div className="overview-data" key={data + index} style={{ gridColumn: index % 2 === 0 ? 1 : 2, gridRow: Math.ceil((index + 1) / 2) }}>
                 <div className="overview-stats">
-                  {statsName} <span className="stat-value">{dashboardData.dashboard_stats[data]}</span>
+                  <span>{statsName}</span> <span className="stat-value">{dashboardData.dashboard_stats[data]}</span>
                 </div>
               </div>
             );

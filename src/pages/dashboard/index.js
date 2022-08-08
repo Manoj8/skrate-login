@@ -25,9 +25,9 @@ function Dashboard(props) {
 
   const shuffle = () => {
     let newData = shuffleData;
-    newData["job_postings"] = shuffleMethod(newData.job_postings);
-    newData["upcoming_sessions"] = shuffleMethod(newData.upcoming_sessions);
-    const shuffledStats = shuffleMethod(Object.keys(newData["dashboard_stats"]));
+    newData["job_postings"] = shuffleMethod(newData.job_postings, true);
+    newData["upcoming_sessions"] = shuffleMethod(newData.upcoming_sessions, false);
+    const shuffledStats = shuffleMethod(Object.keys(newData["dashboard_stats"], true));
     const statsObj = Object.keys(JSON.parse(dashData)["dashboard_stats"]);
     let shuffledStatsData = {};
     shuffledStats.forEach((stat, index) => {
@@ -37,9 +37,11 @@ function Dashboard(props) {
     setShuffledData({ ...newData });
   };
 
-  const shuffleMethod = (shuffleArray) => {
+  const shuffleMethod = (shuffleArray, isRandom) => {
+    let j = shuffleArray.length - 1;
     for (let i = shuffleArray.length - 1; i >= 1; i--) {
-      let j = Math.floor(Math.random() * (i + 1)); // 0 <= j <= i
+      if (isRandom) j = Math.floor(Math.random() * (i + 1));
+      else j--;
       let temp = shuffleArray[j];
       shuffleArray[j] = shuffleArray[i];
       shuffleArray[i] = temp;
