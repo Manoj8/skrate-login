@@ -18,7 +18,6 @@ function App() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(authentication, provider)
       .then((data) => {
-        console.log(data);
         localStorage.setItem("skrate_access_token", JSON.stringify(data?.user?.accessToken || ""));
         setLogin(true);
       })
